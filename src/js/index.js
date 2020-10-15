@@ -11,14 +11,16 @@ import "../styles/index.scss";
 
 function SimpleCounter(props) {
 	return (
-		<div className="bigCounter">
-			<div className="calender">
-				<p>C</p>
+		<div className="container">
+			<div className="bigCounter">
+				<div className="calender">
+					<i className="far fa-clock" />
+				</div>
+				<div className="four">{props.digitFour % 10}</div>
+				<div className="three">{props.digitThree % 10}</div>
+				<div className="two">{props.digitTwo % 10}</div>
+				<div className="one">{props.digitOne % 10}</div>
 			</div>
-			<div className="four">{props.digitFour % 10}</div>
-			<div className="three">{props.digitThree % 10}</div>
-			<div className="two">{props.digitTwo % 10}</div>
-			<div className="one">{props.digitOne % 10}</div>
 		</div>
 	);
 }
